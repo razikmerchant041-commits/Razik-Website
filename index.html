@@ -141,7 +141,7 @@
         <div class="hero-card-widget">
           
           <!-- Small Trigger Box for Printing Process -->
-          <div class="process-trigger-card" id="openProcessModal">
+          <div class="process-trigger-card open-process-modal" id="openProcessModal" onclick="var m=document.getElementById('processModal'); if(m){ m.classList.add('active'); document.body.style.overflow='hidden'; }">
             <div class="trigger-badge"><i class="fas fa-cogs"></i> WORKFLOW GUIDE</div>
             <div class="trigger-main">
               <div class="trigger-icon-circle"><i class="fas fa-tasks"></i></div>
@@ -614,9 +614,9 @@
   </div>
 
   <!-- Printing Process Modal -->
-  <div class="modal-backdrop" id="processModal">
+  <div class="modal-backdrop" id="processModal" onclick="if(event.target===this){ this.classList.remove('active'); document.body.style.overflow=''; }">
     <div class="modal-card process-modal-card">
-      <button class="modal-close-btn" id="closeProcessModalBtn">&times;</button>
+      <button class="modal-close-btn close-process-modal" id="closeProcessModalBtn" onclick="var m=document.getElementById('processModal'); if(m){ m.classList.remove('active'); document.body.style.overflow=''; }">&times;</button>
       <div class="modal-header" style="text-align: center; margin-bottom: 24px;">
         <span class="section-subtitle">WORKFLOW GUIDE</span>
         <h2 class="section-title">Our <span class="highlight">Printing Process</span></h2>

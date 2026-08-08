@@ -122,31 +122,32 @@ document.addEventListener('DOMContentLoaded', () => {
         quoteModal.classList.remove('active');
       }
     });
-  // Printing Process Modal Pop-up Logic
-  const processModal = document.getElementById('processModal');
-  const openProcessBtn = document.getElementById('openProcessModal');
-  const closeProcessBtn = document.getElementById('closeProcessModalBtn');
-
-  if (processModal) {
-    if (openProcessBtn) {
-      openProcessBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        processModal.classList.add('active');
-      });
-    }
-
-    if (closeProcessBtn) {
-      closeProcessBtn.addEventListener('click', () => {
-        processModal.classList.remove('active');
-      });
-    }
-
-    processModal.addEventListener('click', (e) => {
-      if (e.target === processModal) {
-        processModal.classList.remove('active');
+  // Printing Process Modal Global Delegated Click Handler
+  document.addEventListener('click', (e) => {
+    const trigger = e.target.closest('#openProcessModal, .open-process-modal');
+    if (trigger) {
+      e.preventDefault();
+      const modal = document.getElementById('processModal');
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
       }
-    });
-  }
+      return;
+    }
+
+    const closeBtn = e.target.closest('#closeProcessModalBtn, .close-process-modal');
+    const modal = document.getElementById('processModal');
+    if (closeBtn && modal) {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+      return;
+    }
+
+    if (modal && e.target === modal) {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  });
 
   // 5. Forms Submission Simulation
   const quoteForm = document.getElementById('quoteForm');
