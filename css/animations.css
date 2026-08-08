@@ -1,0 +1,315 @@
+/* ==========================================================================
+   SHAHJI PRINTERS - Keyframe Animations & Micro-interactions
+   ========================================================================== */
+
+/* Fade In Up Scroll Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Floating WhatsApp Pulse */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  background-color: #25D366;
+  color: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+  z-index: 999;
+  transition: transform 0.3s ease;
+  animation: pulseGlow 2s infinite;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  color: #FFFFFF;
+}
+
+/* Scroll To Top Floating Button */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 90px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  background-color: var(--primary-navy, #0B1F3A);
+  color: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 12px rgba(11, 31, 58, 0.3);
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  border: 2px solid var(--accent-orange, #F47A20);
+}
+
+.scroll-top-btn.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-top-btn:hover {
+  background-color: var(--accent-orange, #F47A20);
+  transform: translateY(-4px);
+}
+
+/* Image Zoom Hover */
+.zoom-hover-img {
+  transition: transform 0.5s ease;
+}
+
+.zoom-hover-container:hover .zoom-hover-img {
+  transform: scale(1.08);
+}
+
+/* ==========================================================================
+   2-Second Welcome Screen Animation Overlay
+   ========================================================================== */
+#welcome-screen,
+.welcome-screen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at center, #0F2B52 0%, #061224 70%, #030812 100%);
+  z-index: 999999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.8);
+  animation: welcomeOverlayFadeOut 0.5s cubic-bezier(0.4, 0, 0.2, 1) 1.5s forwards;
+  pointer-events: auto;
+}
+
+.welcome-screen-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.welcome-logo-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  padding: 16px;
+  border: 2px solid rgba(244, 122, 32, 0.4);
+  box-shadow: 0 0 30px rgba(244, 122, 32, 0.3), inset 0 0 15px rgba(244, 122, 32, 0.2);
+  animation: welcomeLogoPulse 1.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.welcome-logo-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.5));
+  animation: welcomeHelmRotate 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.welcome-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome-sub-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 6px;
+  color: #F47A20;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  opacity: 0;
+  animation: welcomeTextSlideDown 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+}
+
+.welcome-main-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #FFFFFF;
+  letter-spacing: 2.5px;
+  line-height: 1.2;
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  animation: welcomeTextSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+}
+
+.welcome-main-title .accent-online {
+  background: linear-gradient(135deg, #F47A20 0%, #FFB020 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.welcome-progress-bar {
+  width: 220px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 10px;
+  box-shadow: 0 0 10px rgba(244, 122, 32, 0.3);
+}
+
+.welcome-progress-fill {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #164C9A 0%, #F47A20 50%, #FFB020 100%);
+  border-radius: 4px;
+  animation: welcomeProgressBar 1.5s cubic-bezier(0.1, 0.7, 0.1, 1) forwards;
+}
+
+/* Keyframe Animations */
+@keyframes welcomeLogoPulse {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+    box-shadow: 0 0 0px rgba(244, 122, 32, 0);
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+    box-shadow: 0 0 40px rgba(244, 122, 32, 0.6);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 0 25px rgba(244, 122, 32, 0.4);
+  }
+}
+
+@keyframes welcomeHelmRotate {
+  0% {
+    transform: rotate(-120deg) scale(0.5);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+@keyframes welcomeTextSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes welcomeTextSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes welcomeProgressBar {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes welcomeOverlayFadeOut {
+  0% {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+  99% {
+    opacity: 0;
+    visibility: visible;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.05);
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .welcome-logo-wrapper {
+    width: 95px;
+    height: 95px;
+    margin-bottom: 18px;
+  }
+  .welcome-sub-text {
+    font-size: 0.9rem;
+    letter-spacing: 4px;
+  }
+  .welcome-main-title {
+    font-size: 1.6rem;
+    letter-spacing: 1.5px;
+  }
+  .welcome-progress-bar {
+    width: 170px;
+  }
+}
+

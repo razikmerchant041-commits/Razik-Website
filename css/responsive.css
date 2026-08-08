@@ -1,0 +1,169 @@
+/* ==========================================================================
+   SHAHJI PRINTERS - Responsive Breakpoints & Mobile Navigation
+   ========================================================================== */
+
+/* Large Laptops & Desktops (Below 1200px) */
+@media (max-width: 1200px) {
+  .hero-headline {
+    font-size: 2.75rem;
+  }
+  .machinery-grid,
+  .machinery-grid-6 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .footer-top-grid {
+    grid-template-columns: 1.5fr 1fr 1fr 2fr;
+  }
+  .footer-top-grid .footer-col:last-child {
+    grid-column: span 4;
+    margin-top: 20px;
+  }
+}
+
+/* Medium Tablets (Below 992px) */
+@media (max-width: 992px) {
+  .top-bar-left {
+    display: none;
+  }
+  .top-bar-content {
+    justify-content: center;
+  }
+
+  .nav-list {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background-color: var(--primary-navy);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 80px 32px 32px 32px;
+    gap: 20px;
+    transition: right var(--transition-normal);
+    box-shadow: var(--shadow-lg);
+    z-index: 1000;
+  }
+
+  .nav-list.active {
+    right: 0;
+  }
+
+  .nav-link {
+    color: var(--bg-white);
+    font-size: 1rem;
+  }
+
+  .dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    background: transparent;
+    box-shadow: none;
+    padding: 8px 0 0 16px;
+  }
+
+  .dropdown-item {
+    color: #CBD5E1;
+    padding: 6px 0;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    z-index: 1001;
+  }
+
+  .hero-section {
+    padding: 60px 0 100px 0;
+  }
+
+  .hero-headline {
+    font-size: 2.25rem;
+  }
+
+  .hero-stats-bar {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .stat-item:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    padding-bottom: 16px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .machinery-grid,
+  .machinery-grid-6 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile Devices (Below 768px) */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .hero-headline {
+    font-size: 1.85rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .machinery-grid,
+  .machinery-grid-6 {
+    grid-template-columns: 1fr;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-top-grid .footer-col:last-child {
+    grid-column: span 1;
+  }
+
+  .copyright-content {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .modal-card {
+    padding: 24px;
+  }
+}

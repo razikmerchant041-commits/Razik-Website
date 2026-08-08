@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Orders Portal | Shahji Printers Ahmedabad</title>
+  <meta name="description" content="Administrator dashboard for Shahji Printers to view, manage, filter, and track customer commercial print orders.">
+  
+  <link rel="icon" type="image/png" href="images/logo/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/configurator.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <i class="fas fa-user-shield" style="color: var(--accent-orange);"></i> Shahji Printers Administrator Portal
+      </div>
+      <div class="top-bar-right">
+        <a href="configurator.html" style="color: var(--accent-orange); font-weight: 700;"><i class="fas fa-plus-circle"></i> New Configurator Order</a>
+        <a href="index.html"><i class="fas fa-globe"></i> Main Website</a>
+        <button id="adminLockPortalBtn" style="background: rgba(239, 68, 68, 0.2); border: 1px solid rgba(239, 68, 68, 0.4); color: #f87171; padding: 4px 10px; border-radius: 4px; font-weight: 700; cursor: pointer; font-size: 0.78rem; display: inline-flex; align-items: center; gap: 5px;"><i class="fas fa-lock"></i> Lock Portal</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-badge"><img src="images/logo/logo.png" alt="Shahji Printers Logo"></div>
+        <div class="logo-text">
+          <span class="logo-title">SHAHJI PRINTERS</span>
+          <span class="logo-tagline">Admin Orders Portal</span>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="configurator.html" class="nav-link">Print Configurator</a></li>
+          <li><a href="admin-orders.html" class="nav-link active" style="color: var(--accent-orange); font-weight: 800;"><i class="fas fa-tasks"></i> Orders Management</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Admin Header Banner -->
+  <section style="background: linear-gradient(135deg, var(--primary-navy) 0%, #0f172a 100%); color: #ffffff; padding: 40px 0;">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+      <div>
+        <span style="color: var(--accent-orange); font-weight: 800; text-transform: uppercase; letter-spacing: 1px; font-size: 0.8rem;"><i class="fas fa-database"></i> Live Database Connection</span>
+        <h1 style="font-size: 2rem; color: #fff; margin: 4px 0;">Commercial Print Orders Portal</h1>
+        <p style="color: #94a3b8; font-size: 0.9rem; margin: 0;">Review incoming customer orders, manage status lifecycle, and download artwork files.</p>
+      </div>
+
+      <button id="adminClearDbBtn" class="btn btn-navy" style="background: #334155; font-size: 0.8rem; padding: 8px 16px;">
+        <i class="fas fa-redo"></i> Reset to Sample Database
+      </button>
+    </div>
+  </section>
+
+  <!-- Orders Dashboard Section -->
+  <section style="padding: 40px 0; background: var(--bg-light); min-height: 70vh;">
+    <div class="container">
+
+      <!-- Admin Navigation Tabs -->
+      <div class="admin-tab-bar">
+        <button type="button" id="tabOrdersListBtn" class="admin-tab-btn active">
+          <i class="fas fa-list-alt"></i> Live Orders Database
+        </button>
+        <button type="button" id="tabAnnualReportBtn" class="admin-tab-btn">
+          <i class="fas fa-chart-line"></i> Annual Business Report & Analytics
+        </button>
+      </div>
+
+      <!-- VIEW 1: Orders Database Table -->
+      <div id="adminOrdersListView">
+        <!-- Filter Controls Bar -->
+        <div style="background: #ffffff; padding: 20px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.03); margin-bottom: 24px; display: flex; gap: 16px; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+          
+          <div style="display: flex; gap: 16px; align-items: center; flex: 1; min-width: 280px;">
+            <div style="position: relative; flex: 1;">
+              <i class="fas fa-search" style="position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: #94a3b8;"></i>
+              <input type="text" id="adminSearchInput" placeholder="Search by Order #, Customer Name, Company, or Product..." style="width: 100%; padding: 10px 14px 10px 40px; border-radius: 8px; border: 1px solid #cbd5e1; font-size: 0.9rem;">
+            </div>
+
+            <div>
+              <select id="adminStatusFilter" style="padding: 10px 14px; border-radius: 8px; border: 1px solid #cbd5e1; font-weight: 700; color: var(--primary-navy);">
+                <option value="ALL">All Statuses</option>
+                <option value="NEW">New Orders</option>
+                <option value="REVIEWING">Reviewing</option>
+                <option value="APPROVED">Approved</option>
+                <option value="PRINTING">Printing</option>
+                <option value="COMPLETED">Completed</option>
+                <option value="DELIVERED">Delivered</option>
+                <option value="CANCELLED">Cancelled</option>
+              </select>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Orders Data Table -->
+        <div class="admin-table-container">
+          <table class="admin-orders-table" id="adminOrdersTable">
+            <thead>
+              <tr>
+                <th>Order Number & Date</th>
+                <th>Customer / Company</th>
+                <th>Contact Info</th>
+                <th>Product & Sheet Size</th>
+                <th>Paper Type</th>
+                <th>GSM</th>
+                <th>Quantity</th>
+                <th>Status</th>
+                <th>Update Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="adminOrdersTbody">
+              <!-- Rendered dynamically by js/admin.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- VIEW 2: Annual Business Report & Analytics Dashboard -->
+      <div id="adminAnnualReportView" style="display: none;">
+        
+        <!-- Header Controls Banner -->
+        <div class="annual-report-header">
+          <div>
+            <h2><i class="fas fa-chart-pie" style="color: var(--accent-orange);"></i> Shahji Printers - Annual Business Performance Report</h2>
+            <p>Financial Turnover, Production Volumes & Client Account Analytics</p>
+          </div>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <button id="btnPrintAnnualReport" class="btn btn-navy btn-sm" style="background: var(--primary-navy); color: #fff; padding: 8px 14px; font-size: 0.8rem;"><i class="fas fa-print"></i> Print Report</button>
+            <button id="btnExportCsv" class="btn btn-orange btn-sm" style="padding: 8px 14px; font-size: 0.8rem;"><i class="fas fa-file-excel"></i> Export CSV Data</button>
+          </div>
+        </div>
+
+        <!-- 4 KPI Summary Cards -->
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-icon" style="background: rgba(244, 122, 32, 0.1); color: var(--accent-orange);"><i class="fas fa-rupee-sign"></i></div>
+            <div>
+              <span class="kpi-label">Annual Turnover / Revenue</span>
+              <div class="kpi-value" id="reportTotalRevenue">₹0</div>
+              <span class="kpi-sub green"><i class="fas fa-arrow-up"></i> Live Total Work Volume</span>
+            </div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-icon" style="background: rgba(11, 31, 58, 0.1); color: var(--primary-navy);"><i class="fas fa-boxes"></i></div>
+            <div>
+              <span class="kpi-label">Total Print Orders</span>
+              <div class="kpi-value" id="reportTotalOrders">0 Orders</div>
+              <span class="kpi-sub" id="reportCompletedRate">Processed Jobs</span>
+            </div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-icon" style="background: rgba(22, 101, 52, 0.1); color: #166534;"><i class="fas fa-calculator"></i></div>
+            <div>
+              <span class="kpi-label">Average Order Value (AOV)</span>
+              <div class="kpi-value" id="reportAov">₹0</div>
+              <span class="kpi-sub">Per Commercial Job</span>
+            </div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-icon" style="background: rgba(14, 165, 233, 0.1); color: #0ea5e9;"><i class="fas fa-print"></i></div>
+            <div>
+              <span class="kpi-label">Total Units Printed</span>
+              <div class="kpi-value" id="reportTotalUnits">0 Units</div>
+              <span class="kpi-sub">Offset Sheet Runs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Monthly Revenue & Production Chart -->
+        <div class="report-section-card">
+          <div class="report-card-title"><i class="fas fa-chart-bar" style="color: var(--accent-orange);"></i> Monthly Work Revenue Breakdown (Jan - Dec 2026)</div>
+          <div class="monthly-chart-container" id="monthlyChartBars">
+            <!-- Dynamic Chart Bars -->
+          </div>
+        </div>
+
+        <!-- 2-Column Breakdown: Product Share & Top Clients -->
+        <div class="report-two-col">
+          <div class="report-section-card">
+            <div class="report-card-title"><i class="fas fa-chart-pie" style="color: var(--accent-orange);"></i> Revenue Share by Product Line</div>
+            <div id="productShareBreakdown">
+              <!-- Dynamic Product Progress Bars -->
+            </div>
+          </div>
+
+          <div class="report-section-card">
+            <div class="report-card-title"><i class="fas fa-users" style="color: var(--accent-orange);"></i> Top Business Client Accounts</div>
+            <div id="topClientsBreakdown">
+              <!-- Dynamic Client Breakdown -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background: var(--primary-navy); color: #ffffff; padding: 30px 0; text-align: center; font-size: 0.85rem; color: #64748b;">
+    <div class="container">
+      © 2026 Shahji Printers Administrator Portal. Powered by Shahji Order Management System.
+    </div>
+  </footer>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>

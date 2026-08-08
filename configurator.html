@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Place Printing Order | Shahji Printers Ahmedabad</title>
+  <meta name="description" content="Configure custom printing jobs, select paper GSM, size, lamination, UV, packaging boxes, and place your order directly at Shahji Printers.">
+  
+  <link rel="icon" type="image/png" href="images/logo/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/configurator.css">
+  <link rel="stylesheet" href="css/chatbot.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <span>Welcome to</span> Shahji Printers • Multi-Colour Offset Printing Press
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:+918140340410"><i class="fas fa-phone"></i> +91 81403 40410</a>
+        <a href="mailto:printshahji@gmail.com"><i class="fas fa-envelope"></i> printshahji@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-badge"><img src="images/logo/logo.png" alt="Shahji Printers Logo"></div>
+        <div class="logo-text">
+          <span class="logo-title">SHAHJI PRINTERS</span>
+          <span class="logo-tagline">Quality • Trust • Perfection</span>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="machinery.html" class="nav-link">Machinery</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div id="headerAuthBtnSlot">
+          <button type="button" class="btn-header-signin" id="hdrSignInBtn" onclick="window.ShahjiAuth && window.ShahjiAuth.openModal()">
+            <i class="fab fa-google"></i> <span>Sign In</span>
+          </button>
+        </div>
+        <a href="configurator.html" class="btn btn-orange btn-sm nav-cta-btn">
+          <i class="fas fa-shopping-cart"></i> Place Order
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner Section -->
+  <section style="background: linear-gradient(135deg, var(--primary-navy) 0%, #1e293b 100%); color: #ffffff; padding: 14px 0; text-align: center;">
+    <div class="container">
+      <span style="color: var(--accent-orange); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 0.7rem;"><i class="fas fa-box-open"></i> Quick Order Form</span>
+      <h1 style="font-size: 1.25rem; margin: 2px 0 2px 0; color: #ffffff;">Place Your Commercial Printing Order</h1>
+      <p style="color: #cbd5e1; max-width: 580px; margin: 0 auto; font-size: 0.8rem;">
+        Select your specifications below and place your order instantly via WhatsApp or Web Submission.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Single-Page Place Order Section -->
+  <section style="padding: 16px 0; background: var(--bg-light);" id="printConfiguratorApp">
+    <div class="container">
+
+      <!-- Single-Page Order Form Container -->
+      <div class="config-container-card" id="configuratorCardBody">
+        
+        <div class="single-page-order-grid">
+
+          <!-- LEFT COLUMN: ALL JOB SPECIFICATIONS -->
+          <div class="order-col-left">
+
+            <!-- 1. Product Selection -->
+            <div>
+              <div class="config-section-title"><i class="fas fa-box" style="color: var(--accent-orange);"></i> 1. Product Category</div>
+              <div class="config-grid-select">
+                <div class="config-option-card js-product-select selected" data-product="Packaging Boxes">
+                  <div class="icon-box"><i class="fas fa-box"></i></div>
+                  <div class="config-option-title">Packaging Boxes</div>
+                </div>
+                <div class="config-option-card js-product-select" data-product="Mono Cartons">
+                  <div class="icon-box"><div class="icon-box"><i class="fas fa-boxes"></i></div></div>
+                  <div class="config-option-title">Mono Cartons</div>
+                </div>
+                <div class="config-option-card js-product-select" data-product="Business Cards">
+                  <div class="icon-box"><i class="fas fa-id-card"></i></div>
+                  <div class="config-option-title">Business Cards</div>
+                </div>
+                <div class="config-option-card js-product-select" data-product="Brochures">
+                  <div class="icon-box"><i class="fas fa-book-open"></i></div>
+                  <div class="config-option-title">Brochures</div>
+                </div>
+                <div class="config-option-card js-product-select" data-product="Flyers">
+                  <div class="icon-box"><i class="fas fa-file-alt"></i></div>
+                  <div class="config-option-title">Flyers</div>
+                </div>
+                <div class="config-option-card js-product-select" data-product="Stickers">
+                  <div class="icon-box"><i class="fas fa-tags"></i></div>
+                  <div class="config-option-title">Stickers/Labels</div>
+                </div>
+                <div class="config-option-card js-product-select" data-product="Letterheads">
+                  <div class="icon-box"><i class="fas fa-envelope-open-text"></i></div>
+                  <div class="config-option-title">Letterheads</div>
+                </div>
+                <div class="config-option-card js-product-select" data-product="Paper Bags">
+                  <div class="icon-box"><i class="fas fa-shopping-bag"></i></div>
+                  <div class="config-option-title">Paper Bags</div>
+                </div>
+                <div class="config-option-card js-product-select" data-product="Custom Job Work">
+                  <div class="icon-box"><i class="fas fa-print"></i></div>
+                  <div class="config-option-title">Custom Job Work</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Size Selection -->
+            <div>
+              <div class="config-section-title"><i class="fas fa-expand-alt" style="color: var(--accent-orange);"></i> 2. Print Sheet Size</div>
+              <div class="config-grid-select">
+                <div class="config-option-card js-size-select" data-size="A6"><div class="config-option-title">A6</div></div>
+                <div class="config-option-card js-size-select" data-size="A5"><div class="config-option-title">A5</div></div>
+                <div class="config-option-card js-size-select selected" data-size="A4"><div class="config-option-title">A4</div></div>
+                <div class="config-option-card js-size-select" data-size="A3"><div class="config-option-title">A3</div></div>
+                <div class="config-option-card js-size-select" data-size="12×18"><div class="config-option-title">12 × 18"</div></div>
+                <div class="config-option-card js-size-select" data-size="15×20"><div class="config-option-title">15 × 20"</div></div>
+                <div class="config-option-card js-size-select" data-size="17×25"><div class="config-option-title">17 × 25"</div></div>
+                <div class="config-option-card js-size-select" data-size="18×23"><div class="config-option-title">18 × 23"</div></div>
+                <div class="config-option-card js-size-select" data-size="18×25"><div class="config-option-title">18 × 25"</div></div>
+                <div class="config-option-card js-size-select" data-size="19×25"><div class="config-option-title">19 × 25"</div></div>
+                <div class="config-option-card js-size-select" data-size="20×28"><div class="config-option-title">20 × 28"</div></div>
+                <div class="config-option-card js-size-select" data-size="Custom Size"><div class="config-option-title">Custom</div></div>
+              </div>
+
+              <!-- Custom Size Inputs -->
+              <div id="customSizeInputs" style="display: none; gap: 8px; align-items: flex-end; background: #f8fafc; padding: 8px 12px; border-radius: 6px; border: 1px solid #cbd5e1; max-width: 480px; margin-bottom: 8px; flex-wrap: wrap;">
+                <div>
+                  <label style="font-size: 0.68rem; font-weight: 700; display: block; margin-bottom: 2px;">Measurement Unit:</label>
+                  <select id="customUnitSelect" style="padding: 4px 6px; border-radius: 4px; border: 1px solid #cbd5e1; font-size: 0.78rem; font-weight: 700; background: #fff;">
+                    <option value="in">Inches (in)</option>
+                    <option value="mm">Millimeters (mm)</option>
+                    <option value="cm">Centimeters (cm)</option>
+                    <option value="ft">Feet (ft)</option>
+                  </select>
+                </div>
+                <div>
+                  <label id="customWidthLabel" style="font-size: 0.68rem; font-weight: 700; display: block; margin-bottom: 2px;">Width (in):</label>
+                  <input type="number" id="customWidthInput" value="8.27" step="0.1" max="20" style="width: 85px; padding: 4px 6px; border-radius: 4px; border: 1px solid #cbd5e1; font-size: 0.78rem;">
+                </div>
+                <span style="font-size: 0.9rem; font-weight: 800; margin-bottom: 4px;">×</span>
+                <div>
+                  <label id="customHeightLabel" style="font-size: 0.68rem; font-weight: 700; display: block; margin-bottom: 2px;">Height (in):</label>
+                  <input type="number" id="customHeightInput" value="11.69" step="0.1" max="28" style="width: 85px; padding: 4px 6px; border-radius: 4px; border: 1px solid #cbd5e1; font-size: 0.78rem;">
+                </div>
+              </div>
+
+              <!-- Machine Limit Alert -->
+              <div id="machineLimitAlert" class="machine-limit-alert" style="display: none;">
+                <i class="fas fa-exclamation-triangle"></i> Exceeds machine limit (Max 20 × 28 Inches).
+              </div>
+            </div>
+
+            <!-- 3. Paper Stock, GSM & Finishes -->
+            <div>
+              <div class="config-section-title"><i class="fas fa-layer-group" style="color: var(--accent-orange);"></i> 3. Paper & Print Finishes</div>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 6px;">
+                <div>
+                  <label style="font-weight: 700; font-size: 0.72rem; display: block; margin-bottom: 2px;">Paper Stock Type:</label>
+                  <select id="paperTypeSelect" style="width: 100%; padding: 5px 8px; border-radius: 4px; border: 1px solid #cbd5e1; font-size: 0.78rem; font-weight: 600; background: #fff;">
+                    <option value="Art Paper">Art Paper (Smooth Coated)</option>
+                    <option value="Art Card">Art Card (Thick Board)</option>
+                    <option value="Maplitho">Maplitho (Writing Paper)</option>
+                    <option value="Ivory Board">Ivory Board (Pharma & Cosmetic)</option>
+                    <option value="Duplex Board">Duplex Board (Packaging Back)</option>
+                    <option value="Kraft Paper">Kraft Paper (Brown Eco)</option>
+                    <option value="Sunshine Sticker">Sunshine Sticker (High Gloss)</option>
+                    <option value="PVC Sticker">PVC Sticker (Durable Plastic)</option>
+                    <option value="HM Sticker">HM Sticker (High Density Poly)</option>
+                    <option value="Avery / Every Sticker">Avery / Every Sticker (Premium Chrome)</option>
+                    <option value="Vinyl Sticker">Vinyl Sticker (Waterproof)</option>
+                    <option value="Paper Sticker">Paper Sticker (Indoor)</option>
+                    <option value="Mirror Coat Sticker">Mirror Coat Sticker (Super Gloss)</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label style="font-weight: 700; font-size: 0.72rem; display: block; margin-bottom: 2px;">Paper GSM Weight:</label>
+                  <select id="gsmSelect" style="width: 100%; padding: 5px 8px; border-radius: 4px; border: 1px solid #cbd5e1; font-size: 0.78rem; font-weight: 600; background: #fff;">
+                    <!-- Populated dynamically -->
+                  </select>
+                </div>
+              </div>
+
+              <!-- Paper Description Badge -->
+              <div class="paper-info-badge" id="paperDescBox">
+                <i class="fas fa-info-circle"></i> Smooth coated paper suitable for brochures, flyers, posters and magazines.
+              </div>
+
+              <!-- Finishes Dropdowns -->
+              <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; margin-top: 6px;">
+                <div>
+                  <label style="font-weight: 700; font-size: 0.7rem; display: block; margin-bottom: 2px;">Ink Mode:</label>
+                  <select id="colorsSelect" style="width: 100%; padding: 5px 6px; border-radius: 4px; border: 1px solid #cbd5e1; font-size: 0.75rem;">
+                    <option value="4 Colour CMYK">4 Colour CMYK</option>
+                    <option value="Single Black">Single Black</option>
+                    <option value="2 Colour">2 Colour</option>
+                    <option value="Pantone">Pantone Spot Ink</option>
+                  </select>
+                </div>
+                <div>
+                  <label style="font-weight: 700; font-size: 0.7rem; display: block; margin-bottom: 2px;">Lamination:</label>
+                  <select id="laminationSelect" style="width: 100%; padding: 5px 6px; border-radius: 4px; border: 1px solid #cbd5e1; font-size: 0.75rem;">
+                    <option value="Thermal Gloss Lamination">Thermal Gloss</option>
+                    <option value="Thermal Matte Lamination">Thermal Matte</option>
+                    <option value="Velvet Soft-Touch Lamination">Velvet Soft-Touch</option>
+                    <option value="No Lamination">No Lamination</option>
+                  </select>
+                </div>
+                <div>
+                  <label style="font-weight: 700; font-size: 0.7rem; display: block; margin-bottom: 2px;">UV Coating:</label>
+                  <select id="uvSelect" style="width: 100%; padding: 5px 6px; border-radius: 4px; border: 1px solid #cbd5e1; font-size: 0.75rem;">
+                    <option value="No UV">No UV</option>
+                    <option value="3D Spot UV">3D Spot UV Logo</option>
+                    <option value="Full UV">Full Flood UV</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. Quantity & Box Dimensions -->
+            <div>
+              <div class="config-section-title"><i class="fas fa-calculator" style="color: var(--accent-orange);"></i> 4. Order Quantity</div>
+              <div class="config-grid-select">
+                <div class="config-option-card js-qty-select" data-qty="100"><div class="config-option-title">100</div></div>
+                <div class="config-option-card js-qty-select" data-qty="250"><div class="config-option-title">250</div></div>
+                <div class="config-option-card js-qty-select" data-qty="500"><div class="config-option-title">500</div></div>
+                <div class="config-option-card js-qty-select selected" data-qty="1000"><div class="config-option-title">1,000</div></div>
+                <div class="config-option-card js-qty-select" data-qty="2000"><div class="config-option-title">2,000</div></div>
+                <div class="config-option-card js-qty-select" data-qty="5000"><div class="config-option-title">5,000</div></div>
+                <div class="config-option-card js-qty-select" data-qty="Custom Quantity"><div class="config-option-title">Custom</div></div>
+              </div>
+              <input type="number" id="customQtyInput" placeholder="Custom unit count..." style="display: none; width: 100%; max-width: 200px; padding: 5px 8px; border-radius: 4px; border: 1px solid #cbd5e1; font-size: 0.75rem; margin-bottom: 6px;">
+
+              <!-- Printing Sides Selection (Single Side, Front & Back, Front + Back) -->
+              <div style="margin-top: 10px;">
+                <label style="font-weight: 700; font-size: 0.72rem; display: block; margin-bottom: 4px; color: var(--primary-navy);">
+                  <i class="fas fa-file-invoice" style="color: var(--accent-orange);"></i> Printing Option / Sides:
+                </label>
+                <div class="config-grid-select" style="grid-template-columns: repeat(3, 1fr);">
+                  <div class="config-option-card js-side-select selected" data-side="Single Side">
+                    <div class="config-option-title"><i class="fas fa-file" style="margin-right: 4px; color: var(--accent-orange);"></i> Single Side</div>
+                  </div>
+                  <div class="config-option-card js-side-select" data-side="Front & Back">
+                    <div class="config-option-title"><i class="fas fa-copy" style="margin-right: 4px; color: var(--accent-orange);"></i> Front & Back</div>
+                  </div>
+                  <div class="config-option-card js-side-select" data-side="Front + Back">
+                    <div class="config-option-title"><i class="fas fa-clone" style="margin-right: 4px; color: var(--accent-orange);"></i> Front + Back</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Packaging Dimensions Box -->
+              <div id="packagingOptionsSection" style="margin-top: 6px; background: #f8fafc; padding: 8px 10px; border-radius: 6px; border: 1px solid #cbd5e1;">
+                <div style="font-size: 0.75rem; font-weight: 800; color: var(--primary-navy);"><i class="fas fa-box" style="color: var(--accent-orange);"></i> Box Specs (Length × Width × Height)</div>
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 4px;">
+                  <div><label style="font-size: 0.65rem; font-weight: 700;">L (Inches):</label><input type="number" id="boxLengthInput" value="6" style="width: 100%; padding: 4px 6px; border-radius: 4px; border: 1px solid #cbd5e1; font-size: 0.75rem;"></div>
+                  <div><label style="font-size: 0.65rem; font-weight: 700;">W (Inches):</label><input type="number" id="boxWidthInput" value="4" style="width: 100%; padding: 4px 6px; border-radius: 4px; border: 1px solid #cbd5e1; font-size: 0.75rem;"></div>
+                  <div><label style="font-size: 0.65rem; font-weight: 700;">H (Inches):</label><input type="number" id="boxHeightInput" value="2" style="width: 100%; padding: 4px 6px; border-radius: 4px; border: 1px solid #cbd5e1; font-size: 0.75rem;"></div>
+                  <div>
+                    <label style="font-size: 0.65rem; font-weight: 700;">Style:</label>
+                    <select id="boxStyleSelect" style="width: 100%; padding: 4px 6px; border-radius: 4px; border: 1px solid #cbd5e1; font-size: 0.75rem;">
+                      <option value="Straight Tuck">Straight Tuck</option>
+                      <option value="Reverse Tuck">Reverse Tuck</option>
+                      <option value="Auto Lock">Auto Lock</option>
+                      <option value="Rigid Box">Rigid Box</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- RIGHT COLUMN: SUMMARY, CONTACT & INSTANT SUBMISSION -->
+          <div class="order-col-right">
+
+            <!-- Live Estimate Price Banner -->
+            <div class="live-estimate-card">
+              <div>
+                <div class="live-estimate-title">Estimated Total Cost</div>
+                <div style="font-size: 0.68rem; color: #cbd5e1;">Offset production estimate</div>
+              </div>
+              <div class="live-estimate-amount" id="liveEstimatePrice">₹2,850</div>
+            </div>
+
+            <!-- Artwork Dropzone -->
+            <div>
+              <div class="config-section-title"><i class="fas fa-cloud-upload-alt" style="color: var(--accent-orange);"></i> Artwork Design</div>
+              <div style="margin-bottom: 6px; font-size: 0.75rem;">
+                <label style="font-weight: 700; margin-right: 10px; cursor: pointer;">
+                  <input type="radio" name="designStatus" value="already_have" checked> Have Artwork
+                </label>
+                <label style="font-weight: 700; cursor: pointer;">
+                  <input type="radio" name="designStatus" value="need_design"> Need Design
+                </label>
+              </div>
+
+              <div class="file-upload-dropzone" id="fileDropzone">
+                <i class="fas fa-file-upload" style="font-size: 1.2rem; color: var(--primary-navy); margin-bottom: 2px;"></i>
+                <h4 style="margin: 0; font-size: 0.78rem; color: var(--primary-navy);">Upload Artwork File (PDF, AI, CDR, PSD)</h4>
+                <input type="file" id="artworkFileInput" accept=".pdf,.cdr,.ai,.psd,.eps,.jpg,.png,.zip" style="display: none;">
+                <div class="file-info-chip" id="fileInfoChip" style="display: none;"></div>
+              </div>
+            </div>
+
+            <!-- Customer Account & Verification Section -->
+            <div>
+              <div id="configUserAuthCardSlot">
+                <!-- Dynamically populated by js/auth.js -->
+              </div>
+              
+              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px;">
+                <select id="deliveryMethodSelect" style="flex: 1; padding: 4px 6px; border-radius: 4px; border: 1px solid #cbd5e1; font-size: 0.75rem;">
+                  <option value="Courier Dispatch">Courier Dispatch (All India)</option>
+                  <option value="Local Delivery">Local Delivery (Ahmedabad)</option>
+                  <option value="Press Pickup">Press Self-Pickup</option>
+                </select>
+                <label style="font-weight: 700; font-size: 0.72rem; cursor: pointer; white-space: nowrap;"><input type="checkbox" id="urgentJobCheckbox"> 🚀 Rush Order</label>
+              </div>
+            </div>
+
+            <!-- Job Summary Breakdown Box -->
+            <div class="summary-table-box" id="configOrderSummaryBox">
+              <!-- Populated dynamically via JS -->
+            </div>
+
+            <!-- Instant Action Order Buttons -->
+            <div class="order-btn-group">
+              <a href="#" id="configWhatsappBtn" class="btn-whatsapp-order">
+                <i class="fab fa-whatsapp"></i> Instant WhatsApp Order
+              </a>
+              <button class="btn-direct-order" id="configSubmitBtn">
+                <i class="fas fa-check-circle"></i> Submit Direct Order
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background: var(--primary-navy); color: #ffffff; padding: 36px 0 16px 0;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 24px; margin-bottom: 24px;">
+        <div>
+          <a href="index.html" class="brand-logo" style="margin-bottom: 10px;">
+            <div class="logo-badge"><img src="images/logo/logo.png" alt="Shahji Printers Logo"></div>
+            <div class="logo-text"><span class="logo-title text-white">SHAHJI PRINTERS</span></div>
+          </a>
+          <p style="color: #94a3b8; font-size: 0.8rem;">Multi-colour offset printing press in Ahmedabad providing packaging boxes, Spot UV, lamination, and commercial printing job works.</p>
+        </div>
+        <div>
+          <h4 style="color: #fff; margin-bottom: 10px; font-size: 0.9rem;">Quick Links</h4>
+          <ul style="list-style: none; padding: 0; font-size: 0.8rem; line-height: 1.9;">
+            <li><a href="index.html" style="color: #94a3b8;">Home</a></li>
+            <li><a href="products.html" style="color: #94a3b8;">Products</a></li>
+            <li><a href="machinery.html" style="color: #94a3b8;">Machinery</a></li>
+            <li><a href="configurator.html" style="color: var(--accent-orange); font-weight: 700;">Place Order</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: #fff; margin-bottom: 10px; font-size: 0.9rem;">Customer Help</h4>
+          <ul style="list-style: none; padding: 0; font-size: 0.8rem; line-height: 1.9;">
+            <li><a href="contact.html" style="color: #94a3b8;">Support & Inquiries</a></li>
+            <li><a href="gallery.html" style="color: #94a3b8;">View Sample Works</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: #fff; margin-bottom: 10px; font-size: 0.9rem;">Contact Us</h4>
+          <p style="color: #94a3b8; font-size: 0.8rem;"><i class="fas fa-phone" style="color: var(--accent-orange);"></i> +91 81403 40410</p>
+          <p style="color: #94a3b8; font-size: 0.8rem;"><i class="fas fa-envelope" style="color: var(--accent-orange);"></i> printshahji@gmail.com</p>
+        </div>
+      </div>
+      <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 12px; text-align: center; color: #64748b; font-size: 0.75rem;">
+        © 2026 Shahji Printers. All Rights Reserved. • <a href="admin-orders.html" style="color: #64748b; font-size: 0.75rem; text-decoration: none;" title="Private Owner Admin Portal"><i class="fas fa-lock"></i> Admin Portal</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/auth.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/configurator.js"></script>
+</body>
+</html>

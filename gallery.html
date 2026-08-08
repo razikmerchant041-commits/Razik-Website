@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work & Infrastructure Gallery | Shahji Printers Ahmedabad</title>
+  <meta name="description" content="Explore Shahji Printers modern masonry gallery featuring printed products, job works, machine fleet, factory floor, office, and custom packaging projects.">
+  
+  <meta property="og:title" content="Shahji Printers Work Gallery">
+  <meta property="og:description" content="Portfolio of packaging boxes, vinyl stickers, brochures, machinery, and factory operations.">
+  <meta property="og:image" content="images/products/packaging_boxes.png">
+
+  <link rel="icon" type="image/png" href="images/logo/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/chatbot.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-left"><span>Welcome to</span> Shahji Printers</div>
+      <div class="top-bar-right">
+        <a href="mailto:printshahji@gmail.com" class="top-info-item"><i class="fas fa-envelope"></i> printshahji@gmail.com</a>
+        <a href="tel:+918140340410" class="top-info-item"><i class="fas fa-phone"></i> +91 81403 40410</a>
+        <div class="social-links">
+          <a href="#" class="social-icon-btn"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon-btn"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/918140340410" target="_blank" class="social-icon-btn"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-badge"><img src="images/logo/logo.png" alt="Shahji Printers Logo"></div>
+        <div class="logo-text">
+          <span class="logo-title">SHAHJI PRINTERS</span>
+          <span class="logo-tagline">Quality • Trust • Perfection</span>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="machinery.html" class="nav-link">Machinery</a></li>
+          <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div id="headerAuthBtnSlot">
+          <button type="button" class="btn-header-signin" id="hdrSignInBtn" onclick="window.ShahjiAuth && window.ShahjiAuth.openModal()">
+            <i class="fab fa-google"></i> <span>Sign In</span>
+          </button>
+        </div>
+        <a href="configurator.html" class="btn btn-orange btn-sm nav-cta-btn">
+          <i class="fas fa-shopping-cart"></i> Place Order
+        </a>
+      </div>
+      <button class="mobile-nav-toggle"><i class="fas fa-bars"></i></button>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <div class="page-banner">
+    <div class="container">
+      <h1>Our Portfolio & Infrastructure</h1>
+      <div class="breadcrumb"><a href="index.html">Home</a> / <span>Gallery</span></div>
+    </div>
+  </div>
+
+  <!-- Masonry Gallery Section -->
+  <section class="gallery-section reveal-on-scroll" style="padding: 80px 0;">
+    <div class="container">
+      
+      <!-- Filter Category Tabs -->
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">All Photos</button>
+        <button class="filter-btn" data-filter="products">Product Images</button>
+        <button class="filter-btn" data-filter="machines">Machine Images</button>
+        <button class="filter-btn" data-filter="office">Office</button>
+        <button class="filter-btn" data-filter="factory">Factory</button>
+        <button class="filter-btn" data-filter="packaging">Packaging</button>
+      </div>
+
+      <div class="gallery-grid" style="grid-template-columns: repeat(3, 1fr); gap: 24px;">
+        
+        <!-- Item 1 -->
+        <div class="gallery-card zoom-hover-container" data-category="packaging">
+          <img src="images/products/packaging_boxes.png" alt="Luxury Rigid Box" class="zoom-hover-img">
+          <div class="gallery-overlay">
+            <div class="gallery-info">
+              <h4>Luxury Rigid Packaging Box</h4>
+              <p>Packaging Category</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="gallery-card zoom-hover-container" data-category="products">
+          <img src="images/products/stickers_labels.png" alt="Custom Vinyl Stickers" class="zoom-hover-img">
+          <div class="gallery-overlay">
+            <div class="gallery-info">
+              <h4>Custom Vinyl Stickers</h4>
+              <p>Product Images</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="gallery-card zoom-hover-container" data-category="machines">
+          <img src="images/hero/hero_offset_press.png" alt="5 Colour Offset Press" class="zoom-hover-img">
+          <div class="gallery-overlay">
+            <div class="gallery-info">
+              <h4>5 Colour Offset Press & Job Works</h4>
+              <p>Machine Images</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3b: 4 Colour Offset Press -->
+        <div class="gallery-card zoom-hover-container" data-category="machines">
+          <img src="images/machinery/four_color_offset.png" alt="4 Colour Offset Press" class="zoom-hover-img">
+          <div class="gallery-overlay">
+            <div class="gallery-info">
+              <h4>4 Colour Offset Machine</h4>
+              <p>Machine Images</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="gallery-card zoom-hover-container" data-category="products">
+          <img src="images/products/business_cards.png" alt="Gold Foil Business Cards" class="zoom-hover-img">
+          <div class="gallery-overlay">
+            <div class="gallery-info">
+              <h4>Gold Foil Business Cards</h4>
+              <p>Product Images</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="gallery-card zoom-hover-container" data-category="products">
+          <img src="images/products/catalogues.png" alt="Corporate Catalogues" class="zoom-hover-img">
+          <div class="gallery-overlay">
+            <div class="gallery-info">
+              <h4>Corporate Profile Catalog</h4>
+              <p>Product Images</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="gallery-card zoom-hover-container" data-category="factory">
+          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" alt="Factory Printing Unit" class="zoom-hover-img">
+          <div class="gallery-overlay">
+            <div class="gallery-info">
+              <h4>Printing Plant Operations</h4>
+              <p>Factory Category</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 7 -->
+        <div class="gallery-card zoom-hover-container" data-category="office">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Shahji Printers Admin Office" class="zoom-hover-img">
+          <div class="gallery-overlay">
+            <div class="gallery-info">
+              <h4>Estimating & Design Desk</h4>
+              <p>Office Category</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 8 -->
+        <div class="gallery-card zoom-hover-container" data-category="packaging">
+          <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80" alt="Paper Bags" class="zoom-hover-img">
+          <div class="gallery-overlay">
+            <div class="gallery-info">
+              <h4>Custom Retail Paper Bags</h4>
+              <p>Packaging Category</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-col footer-about">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 16px;">
+            <div class="logo-badge"><img src="images/logo/logo.png" alt="Shahji Printers Logo"></div>
+            <div class="logo-text"><span class="logo-title text-white">SHAHJI PRINTERS</span></div>
+          </a>
+          <p>Providing premium printing solutions with latest technology and best quality materials.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon-btn"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon-btn"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/918140340410" target="_blank" class="social-icon-btn"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Our Products</a></li>
+            <li><a href="machinery.html">Machinery</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Our Services</h4>
+          <ul class="footer-links">
+            <li><a href="products.html#packaging">Packaging Boxes</a></li>
+            <li><a href="products.html#jobworks">Printing Job Works</a></li>
+            <li><a href="products.html#stickers">Stickers & Labels</a></li>
+            <li><a href="products.html#cards">Business Cards</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Contact Us</h4>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><span>+91 81403 40410</span></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>printshahji@gmail.com</span></div>
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>Dudheshwar, Ahmedabad, Gujarat, India</span></div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Send Us A Message</h4>
+          <form id="footerMsgForm" class="footer-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn btn-orange">SEND MESSAGE</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright-bar">
+      <div class="container copyright-content">
+        <div>© 2026 Shahji Printers. All Rights Reserved. • <a href="admin-orders.html" style="color: #64748b; font-size: 0.78rem; text-decoration: none;" title="Private Owner Admin Portal"><i class="fas fa-lock"></i> Admin Portal</a></div>
+        <div>Designed with <i class="fas fa-heart"></i> for Quality Printing</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Buttons -->
+  <a href="https://wa.me/918140340410" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+  <button id="scrollTopBtn" class="scroll-top-btn"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- Quote Modal -->
+  <div class="modal-backdrop" id="quoteModal">
+    <div class="modal-card">
+      <button class="modal-close-btn">&times;</button>
+      <div class="modal-header">
+        <h3>Request A Quick Quote</h3>
+        <p>Fill out the details below and our team will get back to you within 2 hours.</p>
+      </div>
+      <form id="quoteForm">
+        <div class="form-group"><label>Full Name *</label><input type="text" class="form-control" required></div>
+        <div class="form-group"><label>Phone / WhatsApp Number *</label><input type="tel" class="form-control" required></div>
+        <div class="form-group">
+          <label>Select Service *</label>
+          <select class="form-control" required>
+            <option value="Packaging Boxes">Packaging Boxes</option>
+            <option value="Printing Job Works">Printing Job Works</option>
+            <option value="Stickers & Labels">Stickers & Labels</option>
+            <option value="Brochures">Brochures</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Project Details & Quantity *</label><textarea class="form-control" required></textarea></div>
+        <button type="submit" class="btn btn-orange" style="width: 100%;">Submit Quote Request</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/chatbot.js" defer></script>
+</body>
+</html>
