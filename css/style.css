@@ -509,9 +509,7 @@ footer .logo-badge img,
 
 .hero-card-widget {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 12px;
+  justify-content: flex-end;
   position: relative;
   z-index: 2;
 }
