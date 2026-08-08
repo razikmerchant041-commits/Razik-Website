@@ -608,31 +608,9 @@
     }
   }
 
-  // Calculate Live Price Estimate
+  // Calculate Live Price Estimate (Disabled - Quotes provided on request)
   function calculateLiveEstimate() {
-    const qty = (state.quantity === 'Custom Quantity') ? state.customQuantity : (parseInt(state.quantity) || 1000);
-    const baseRate = BASE_RATES[state.product] || 2.5;
-
-    let total = qty * baseRate;
-
-    // Paper Stock Premium Factors
-    if (state.paperType === 'PVC Sticker' || state.paperType === 'Avery / Every Sticker') total += qty * 0.5;
-    else if (state.paperType === 'HM Sticker' || state.paperType === 'Vinyl Sticker') total += qty * 0.35;
-    else if (state.paperType === 'Sunshine Sticker' || state.paperType === 'Mirror Coat Sticker') total += qty * 0.2;
-
-    // Print Side Factor
-    if (state.printSide === 'Front & Back') total += qty * 0.35;
-    else if (state.printSide === 'Front + Back') total += qty * 0.5;
-
-    if (state.lamination && state.lamination !== 'No Lamination') total += qty * 0.4;
-    if (state.uv === '3D Spot UV') total += qty * 0.7;
-
-    state.estimatedPrice = Math.round(total);
-
-    const priceEl = document.getElementById('liveEstimatePrice');
-    if (priceEl) {
-      priceEl.textContent = `₹${state.estimatedPrice.toLocaleString('en-IN')}`;
-    }
+    state.estimatedPrice = 0;
   }
 
   // Populate Order Summary
@@ -710,7 +688,6 @@
       `📑 *Print Option:* ${state.printSide}%0A` +
       `🎨 *Colours/Finish:* ${state.colors} | ${state.lamination} | ${state.uv}%0A` +
       `🔢 *Quantity:* ${finalQty} Units%0A` +
-      `💰 *Estimated Total:* ₹${state.estimatedPrice}%0A` +
       `------------------------------------%0A` +
       `Please confirm quote and delivery timeline.`;
 
@@ -750,7 +727,7 @@
       lamination: state.lamination,
       uv: state.uv,
       quantity: finalQty,
-      price: `₹${state.estimatedPrice}`,
+      price: 'Quote on Request',
       uploadedFile: state.uploadedFileName || 'None (Design Requested)',
       deliveryMethod: state.deliveryMethod,
       isUrgent: state.isUrgent
@@ -773,7 +750,7 @@
           <div style="background: #f8fafc; border: 2px dashed var(--accent-orange); border-radius: 8px; padding: 12px; max-width: 380px; margin: 0 auto 18px auto;">
             <span style="font-size: 0.7rem; color: #64748b; text-transform: uppercase; font-weight: 700;">Order Reference Code</span>
             <div style="font-size: 1.6rem; font-weight: 900; color: var(--primary-navy); letter-spacing: 1px; margin: 2px 0;">${orderNum}</div>
-            <p style="font-size: 0.75rem; color: #64748b; margin: 0;">Estimated Total: <strong style="color: #166534;">₹${state.estimatedPrice.toLocaleString('en-IN')}</strong></p>
+            <p style="font-size: 0.75rem; color: #64748b; margin: 0;">Pricing: <strong style="color: var(--accent-orange);">Quote on Request</strong></p>
           </div>
 
           <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">

@@ -70,9 +70,9 @@ Pre-Press File Preparation:
 - Bleed Area: 3mm bleed margin around all artwork edges.
 - Formats Accepted: PDF (Press Ready), AI, CDR, EPS, high-res TIFF.
 
-Pricing & Live Estimates:
-- Prices depend on dimensions, paper GSM, finish, and quantity (bulk discounts apply).
-- Customers can also calculate live estimations on our website's Print Configurator page (configurator.html) or contact us on WhatsApp (+91 81403 40410).
+Custom Quotes & Specifications:
+- Custom quotes depend on dimensions, paper GSM, finish, and quantity (bulk discounts apply).
+- Customers can submit custom order specifications on our website's Print Configurator page (configurator.html) or contact us on WhatsApp (+91 81403 40410).
 `;
 
   let chatHistory = [];
@@ -131,7 +131,7 @@ Pricing & Live Estimates:
               <button class="shahji-chip" data-prompt="What is the difference between 3D Spot UV & Lamination?">🎨 Spot UV vs Lamination</button>
               <button class="shahji-chip" data-prompt="Which paper GSM is best for my project?">📄 Paper GSM Guide</button>
               <button class="shahji-chip" data-prompt="Tell me about your Japanese 5-Colour Offset Press machine.">⚙️ Machinery Fleet</button>
-              <button class="shahji-chip" data-prompt="How can I request a quote or price estimate?">📞 Request Instant Quote</button>
+              <button class="shahji-chip" data-prompt="How can I request a custom quote?">📞 Request Instant Quote</button>
               <button class="shahji-chip" data-prompt="Where is Shahji Printers located and what are your hours?">📍 Location & Hours</button>
             </div>
           </div>
@@ -221,7 +221,7 @@ Pricing & Live Estimates:
           <button class="shahji-chip" data-prompt="What packaging boxes & mono cartons services do you offer?">📦 Packaging Boxes</button>
           <button class="shahji-chip" data-prompt="What is the difference between 3D Spot UV & Lamination?">🎨 Spot UV vs Lamination</button>
           <button class="shahji-chip" data-prompt="Which paper GSM is best for my project?">📄 Paper GSM Guide</button>
-          <button class="shahji-chip" data-prompt="How can I request a quote or price estimate?">📞 Request Instant Quote</button>
+          <button class="shahji-chip" data-prompt="How can I request a custom quote?">📞 Request Instant Quote</button>
         </div>
       </div>
     `;
@@ -337,7 +337,7 @@ Respected Client, Shahji Printers specializes in high-quality packaging manufact
 - **Corrugated Boxes:** Durable multi-layer shipping & transit packaging.
 - **Special Enhancements:** Food-grade moisture-resistant coating, 3D raised Spot UV, gold/silver foil accents, and window die-cutting.
 
-💡 *Would you like to calculate an instant box estimate?* You can use our web [Print Configurator](configurator.html) or send box dimensions to our WhatsApp (**${CONFIG.phone}**)!`;
+💡 *Would you like to submit your box specifications?* You can use our web [Print Configurator](configurator.html) or send box dimensions to our WhatsApp (**${CONFIG.phone}**)!`;
     }
 
     // 3. Paper GSM & Weight Guide
@@ -390,7 +390,7 @@ Respected Client, custom printing rates are calculated based on paper GSM, dimen
 
 You can easily get a quote:
 - 📱 **WhatsApp Instant Quote:** Send specs/artwork to **+91 81403 40410**
-- 🧮 **Live Estimator:** Try our online [Print Configurator](configurator.html)
+- 🛈 **Print Configurator:** Try our online [Print Configurator](configurator.html)
 - 📞 **Direct Phone Call:** +91 81403 40410
 - ✉️ **Email Inquiry:** printshahji@gmail.com
 
@@ -408,7 +408,7 @@ Aapki har tarah ki printing aur packaging requirement ke liye hum tayaar hain:
 - 🎨 **Special Finishes:** 3D Spot UV, Matte/Gloss Lamination aur Gold/Silver Foil Stamping.
 - 📞 **Instant Quotation:** Apne order ki details WhatsApp par send karein: **+91 81403 40410** ya call karein!
 
-Aap hamare website par [Print Configurator](configurator.html) me bhi estimate check kar sakte hain.`;
+Aap hamare website par [Print Configurator](configurator.html) me job specifications submit kar sakte hain.`;
     }
 
     // 8. Delivery, Turnaround & Fast-Track
