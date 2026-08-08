@@ -81,6 +81,15 @@
     padding: 60px 0 100px 0;
   }
 
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .hero-card-widget {
+    justify-content: center;
+  }
+
   .hero-headline {
     font-size: 2.25rem;
   }
