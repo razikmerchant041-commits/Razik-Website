@@ -61,6 +61,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Reveal-on-Scroll Immediate Visibility & Intersection Observer
+  const revealElems = document.querySelectorAll('.reveal-on-scroll');
+  revealElems.forEach(el => el.classList.add('is-visible'));
+
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, { threshold: 0.05 });
+
+    revealElems.forEach(el => revealObserver.observe(el));
+  }
+
   // 2. Mobile Navigation Toggle Drawer
   const mobileToggleBtn = document.querySelector('.mobile-nav-toggle');
   const navList = document.querySelector('.nav-list');
