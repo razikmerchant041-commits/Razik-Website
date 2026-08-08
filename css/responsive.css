@@ -118,6 +118,11 @@
     gap: 16px;
   }
 
+  .overview-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
   .machinery-grid,
   .machinery-grid-6 {
     grid-template-columns: repeat(2, 1fr);

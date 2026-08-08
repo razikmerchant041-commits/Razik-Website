@@ -996,6 +996,118 @@ footer .logo-badge img,
   color: #4ADE80;
 }
 
+/* Machinery & Products Overview Section */
+.overview-section {
+  padding: 88px 0;
+  background: linear-gradient(135deg, #061224 0%, #0B1F3A 50%, #0F2B52 100%);
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-top: 36px;
+}
+
+.overview-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.overview-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(244, 122, 32, 0.5);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+.overview-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.overview-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--accent-orange);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.overview-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.overview-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.overview-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.overview-item-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: rgba(244, 122, 32, 0.18);
+  border: 1px solid rgba(244, 122, 32, 0.3);
+  color: var(--accent-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.overview-item-title {
+  font-weight: 700;
+  font-size: 0.96rem;
+  color: #FFFFFF;
+  margin-bottom: 2px;
+}
+
+.overview-item-desc {
+  font-size: 0.83rem;
+  color: #CBD5E1;
+  line-height: 1.48;
+}
+
+.overview-footer-cta {
+  margin-top: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
 /* Machinery Section */
 .machinery-section {
   padding: 96px 0;
