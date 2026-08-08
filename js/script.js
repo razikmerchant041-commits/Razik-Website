@@ -122,6 +122,31 @@ document.addEventListener('DOMContentLoaded', () => {
         quoteModal.classList.remove('active');
       }
     });
+  // Printing Process Modal Pop-up Logic
+  const processModal = document.getElementById('processModal');
+  const openProcessModalBtns = document.querySelectorAll('.open-process-modal');
+  const closeProcessModalBtns = document.querySelectorAll('.close-process-modal');
+
+  if (processModal) {
+    openProcessModalBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        processModal.classList.add('active');
+      });
+    });
+
+    closeProcessModalBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        processModal.classList.remove('active');
+      });
+    });
+
+    processModal.addEventListener('click', (e) => {
+      if (e.target === processModal) {
+        processModal.classList.remove('active');
+      }
+    });
   }
 
   // 5. Forms Submission Simulation
