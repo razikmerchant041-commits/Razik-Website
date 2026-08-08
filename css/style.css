@@ -516,11 +516,11 @@ footer .logo-badge img,
 
 .we-print-card {
   background: #FFFFFF;
-  border-radius: 24px;
-  padding: 32px 28px;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.2);
+  border-radius: 18px;
+  padding: 18px 20px;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.2);
   width: 100%;
-  max-width: 380px;
+  max-width: 300px;
   color: var(--primary-navy);
   position: relative;
   overflow: hidden;
@@ -528,17 +528,17 @@ footer .logo-badge img,
 }
 
 .we-print-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 25px 50px -10px rgba(0, 0, 0, 0.45);
 }
 
 .we-print-header {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .we-print-title {
   font-family: var(--font-heading);
-  font-size: 1.55rem;
+  font-size: 1.15rem;
   font-weight: 900;
   letter-spacing: 0.5px;
   color: #0F172A;
@@ -548,7 +548,7 @@ footer .logo-badge img,
 
 .we-print-subtitle {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 0.92rem;
   font-weight: 800;
   color: #0F172A;
   text-transform: uppercase;
@@ -561,24 +561,24 @@ footer .logo-badge img,
 }
 
 .we-print-card .gradient-line {
-  height: 4px;
+  height: 3px;
   width: 100%;
   border-radius: 4px;
   background: linear-gradient(90deg, #F47A20 0%, #EC4899 35%, #8B5CF6 70%, #3B82F6 100%);
-  margin-top: 12px;
+  margin-top: 6px;
 }
 
 .we-print-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 7px;
 }
 
 .we-print-list li {
   display: flex;
   align-items: center;
-  gap: 14px;
-  font-size: 0.95rem;
+  gap: 10px;
+  font-size: 0.8rem;
   font-weight: 700;
   color: #1E293B;
   transition: transform 0.2s ease, color 0.2s ease;
@@ -590,15 +590,15 @@ footer .logo-badge img,
 }
 
 .we-print-list .list-icon {
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
   background: #F1F5F9;
   border: 1px solid #E2E8F0;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.9rem;
+  font-size: 0.72rem;
   color: var(--primary-navy);
   flex-shrink: 0;
   transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
