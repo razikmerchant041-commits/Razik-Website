@@ -124,23 +124,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   // Printing Process Modal Pop-up Logic
   const processModal = document.getElementById('processModal');
-  const openProcessModalBtns = document.querySelectorAll('.open-process-modal');
-  const closeProcessModalBtns = document.querySelectorAll('.close-process-modal');
+  const openProcessBtn = document.getElementById('openProcessModal');
+  const closeProcessBtn = document.getElementById('closeProcessModalBtn');
 
   if (processModal) {
-    openProcessModalBtns.forEach(btn => {
-      btn.addEventListener('click', (e) => {
+    if (openProcessBtn) {
+      openProcessBtn.addEventListener('click', (e) => {
         e.preventDefault();
         processModal.classList.add('active');
       });
-    });
+    }
 
-    closeProcessModalBtns.forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
+    if (closeProcessBtn) {
+      closeProcessBtn.addEventListener('click', () => {
         processModal.classList.remove('active');
       });
-    });
+    }
 
     processModal.addEventListener('click', (e) => {
       if (e.target === processModal) {

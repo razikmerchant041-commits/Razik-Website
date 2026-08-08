@@ -137,25 +137,38 @@
           </div>
         </div>
 
-        <!-- OUR PRINTING PROCESS Small Hero Box -->
+        <!-- WE PRINT & OUR PRINTING PROCESS Widget Column -->
         <div class="hero-card-widget">
-          <div class="we-print-card process-box-clickable open-process-modal" title="Click to view full process details">
+          
+          <!-- Small Trigger Box for Printing Process -->
+          <div class="process-trigger-card" id="openProcessModal">
+            <div class="trigger-badge"><i class="fas fa-cogs"></i> WORKFLOW GUIDE</div>
+            <div class="trigger-main">
+              <div class="trigger-icon-circle"><i class="fas fa-tasks"></i></div>
+              <div class="trigger-text">
+                <div class="trigger-title">OUR PRINTING PROCESS</div>
+                <div class="trigger-sub">Click to view 6-step workflow <i class="fas fa-arrow-right"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- WE PRINT EVERYTHING YOU NEED Card Box -->
+          <div class="we-print-card">
             <div class="we-print-header">
-              <div class="we-print-title">OUR PRINTING</div>
-              <div class="we-print-subtitle"><span class="orange-highlight">PROCESS</span> WORKFLOW</div>
+              <div class="we-print-title">WE PRINT</div>
+              <div class="we-print-subtitle"><span class="orange-highlight">EVERYTHING</span> YOU NEED</div>
               <div class="gradient-line"></div>
             </div>
             <ul class="we-print-list">
-              <li><div class="list-icon"><i class="fas fa-file-upload"></i></div> <span>01. Design & File Submission</span></li>
-              <li><div class="list-icon"><i class="fas fa-print"></i></div> <span>02. Multicolour Printing</span></li>
-              <li><div class="list-icon"><i class="fas fa-layer-group"></i></div> <span>03. Thermal / Cold Lamination</span></li>
-              <li><div class="list-icon"><i class="fas fa-sun"></i></div> <span>04. 3D Spot UV Finishing</span></li>
-              <li><div class="list-icon"><i class="fas fa-cut"></i></div> <span>05. Precision Cutting</span></li>
-              <li><div class="list-icon"><i class="fas fa-check-circle"></i></div> <span>06. Quality Check & Ready</span></li>
+              <li><div class="list-icon"><i class="fas fa-id-card"></i></div> <span>Business Cards</span></li>
+              <li><div class="list-icon"><i class="fas fa-book-open"></i></div> <span>Brochures & Pamphlets</span></li>
+              <li><div class="list-icon"><i class="fas fa-box-open"></i></div> <span>Packaging Boxes</span></li>
+              <li><div class="list-icon"><i class="fas fa-tags"></i></div> <span>Stickers & Labels</span></li>
+              <li><div class="list-icon"><i class="fas fa-sun"></i></div> <span>3D Spot UV Printing</span></li>
+              <li><div class="list-icon"><i class="fas fa-layer-group"></i></div> <span>Lamination (Hot & Cold)</span></li>
+              <li><div class="list-icon"><i class="fas fa-envelope-open-text"></i></div> <span>Letterheads & Envelopes</span></li>
+              <li><div class="list-icon"><i class="fas fa-print"></i></div> <span>And Much More...</span></li>
             </ul>
-            <button class="btn-view-process-trigger">
-              <i class="fas fa-info-circle"></i> Click For Full Process Details <i class="fas fa-arrow-right"></i>
-            </button>
           </div>
         </div>
       </div>
@@ -255,6 +268,8 @@
         </div>
       </div>
     </div>
+  </section>
+
   </section>
 
   <!-- Machinery Section -->
@@ -596,14 +611,15 @@
         <button type="submit" class="btn btn-orange" style="width: 100%;">Submit Quote Request</button>
       </form>
     </div>
-  <!-- Our Printing Process Modal -->
+  </div>
+
+  <!-- Printing Process Modal -->
   <div class="modal-backdrop" id="processModal">
     <div class="modal-card process-modal-card">
-      <button class="modal-close-btn close-process-modal">&times;</button>
+      <button class="modal-close-btn" id="closeProcessModalBtn">&times;</button>
       <div class="modal-header" style="text-align: center; margin-bottom: 24px;">
-        <span class="section-subtitle">STEP-BY-STEP WORKFLOW</span>
-        <h3 style="font-size: 1.75rem; margin-top: 4px; color: var(--primary-navy);">Our <span class="highlight">Printing Process</span></h3>
-        <p style="font-size: 0.88rem; color: #64748b;">Here is how we turn your digital artwork into flawless printed products.</p>
+        <span class="section-subtitle">WORKFLOW GUIDE</span>
+        <h2 class="section-title">Our <span class="highlight">Printing Process</span></h2>
       </div>
 
       <div class="process-steps-grid">
@@ -611,7 +627,7 @@
         <div class="process-card">
           <div class="process-step-badge">STEP 01</div>
           <div class="process-icon-box"><i class="fas fa-file-upload"></i></div>
-          <h4 class="process-title">Design & File Submission</h4>
+          <h3 class="process-title">Design & File Submission</h3>
           <p class="process-desc">Customers can submit their ready-to-print CDR or PDF file.</p>
         </div>
 
@@ -619,7 +635,7 @@
         <div class="process-card">
           <div class="process-step-badge">STEP 02</div>
           <div class="process-icon-box"><i class="fas fa-print"></i></div>
-          <h4 class="process-title">Printing</h4>
+          <h3 class="process-title">Printing</h3>
           <p class="process-desc">The design is printed using our multicolour offset printing setup according to the selected paper, size and quantity.</p>
         </div>
 
@@ -627,7 +643,7 @@
         <div class="process-card">
           <div class="process-step-badge">STEP 03</div>
           <div class="process-icon-box"><i class="fas fa-layer-group"></i></div>
-          <h4 class="process-title">Lamination</h4>
+          <h3 class="process-title">Lamination</h3>
           <p class="process-desc">Choose between <strong>Thermal Lamination</strong> or <strong>Cold Lamination</strong> depending on the product requirement.</p>
         </div>
 
@@ -635,7 +651,7 @@
         <div class="process-card">
           <div class="process-step-badge">STEP 04</div>
           <div class="process-icon-box"><i class="fas fa-sun"></i></div>
-          <h4 class="process-title">UV Finishing</h4>
+          <h3 class="process-title">UV Finishing</h3>
           <p class="process-desc">Add UV / Spot UV finishing where required for a premium and highlighted appearance.</p>
         </div>
 
@@ -643,7 +659,7 @@
         <div class="process-card">
           <div class="process-step-badge">STEP 05</div>
           <div class="process-icon-box"><i class="fas fa-cut"></i></div>
-          <h4 class="process-title">Cutting & Finishing</h4>
+          <h3 class="process-title">Cutting & Finishing</h3>
           <p class="process-desc">Printed sheets are precisely cut and finished according to the required dimensions and product specifications.</p>
         </div>
 
@@ -651,13 +667,13 @@
         <div class="process-card">
           <div class="process-step-badge">STEP 06</div>
           <div class="process-icon-box"><i class="fas fa-check-circle"></i></div>
-          <h4 class="process-title">Quality Check & Ready</h4>
+          <h3 class="process-title">Quality Check & Ready</h3>
           <p class="process-desc">The finished products are checked before packing and delivery.</p>
         </div>
       </div>
 
       <!-- Bottom Pipeline Flow Bar -->
-      <div class="process-pipeline-bar" style="margin-top: 28px;">
+      <div class="process-pipeline-bar">
         <div class="pipeline-item"><i class="fas fa-print"></i> PRINT</div>
         <div class="pipeline-arrow"><i class="fas fa-chevron-right"></i></div>
         <div class="pipeline-item"><i class="fas fa-layer-group"></i> LAMINATE</div>
