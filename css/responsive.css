@@ -109,6 +109,15 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .process-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process-pipeline-bar {
+    justify-content: center;
+    gap: 16px;
+  }
+
   .machinery-grid,
   .machinery-grid-6 {
     grid-template-columns: repeat(2, 1fr);
@@ -143,6 +152,21 @@
 
   .product-grid {
     grid-template-columns: 1fr;
+  }
+
+  .process-steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-pipeline-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 18px 20px;
+    gap: 12px;
+  }
+
+  .pipeline-arrow {
+    display: none;
   }
 
   .machinery-grid,
